@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center_vertical"
     tools:context=".fragments.AccountFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -22,28 +22,61 @@
         android:src="@drawable/ic_person_gray"
         android:layout_marginBottom="20dp"/>
 
-    <TextView
-        android:id="@+id/nameEt"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name"
-        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+        android:id="@+id/nameTil">
 
-    <TextView
-        android:id="@+id/emailEt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:inputType="text"
+            android:enabled="false"
+            style="@style/TextAppearance.MaterialComponents.Headline5"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/phoneEt"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailTil">
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            style="@style/TextAppearance.MaterialComponents.Headline5"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneTil">
+
+        <EditText
+            android:id="@+id/phoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone number"
+            android:inputType="phone"
+            android:enabled="false"
+            style="@style/TextAppearance.MaterialComponents.Headline5"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/editBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Phone number"
-        android:inputType="phone"
-        android:drawableRight="@drawable/ic_baseline_edit_24"
-        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+        android:layout_gravity="center"
+        android:text="Edit profile"
+        android:visibility="visible"
+        android:layout_marginTop="15dp"/>
 
     <Button
         android:id="@+id/updateBtn"
@@ -51,7 +84,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Update"
+        android:visibility="gone"
         android:layout_marginTop="15dp"/>
+
 
     <Button
         android:id="@+id/logoutBtn"

@@ -31,7 +31,7 @@ import java.util.ArrayList;
 
 public class ProductOwnerAdapter extends RecyclerView.Adapter<ProductOwnerAdapter.HolderProduct>{
 
-    private Context context;
+    private final Context context;
     public ArrayList<ModelProduct> productList;
 
     FirebaseDatabase db = FirebaseDatabase.getInstance("https://shop-app-firebase-180d0-default-rtdb.asia-southeast1.firebasedatabase.app/");
