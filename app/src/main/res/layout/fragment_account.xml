@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".fragments.AccountFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/emailTil"
+        android:layout_gravity="center"
+        android:id="@+id/profileImv"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/design_default_color_primary"
+        android:src="@drawable/ic_person_gray"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/nameEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+    <TextView
+        android:id="@+id/emailEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+    <EditText
+        android:id="@+id/phoneEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone number"
+        android:inputType="phone"
+        android:drawableRight="@drawable/ic_baseline_edit_24"
+        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Update"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="LogOut"
+        android:layout_marginTop="5dp"/>
+
+
+</LinearLayout>

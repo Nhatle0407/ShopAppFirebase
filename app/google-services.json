@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "364113090967",
+    "project_id": "shop-app-firebase-180d0",
+    "storage_bucket": "shop-app-firebase-180d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364113090967:android:1edde29903ad491fcbccd2",
+        "android_client_info": {
+          "package_name": "com.example.shopappfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364113090967-qsrvnu90vuktbfm2if0l8f09a5r04r1i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shopappfirebase",
+            "certificate_hash": "29f4e14c9237face9c89d3119232db909f5903df"
+          }
+        },
+        {
+          "client_id": "364113090967-p4coepec5r2tn57q7br7n314okobu8h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI0VD7kU2EOITikJKySzDbO9pHLdC2-8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364113090967-p4coepec5r2tn57q7br7n314okobu8h8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

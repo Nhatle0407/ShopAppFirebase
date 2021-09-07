@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.AddProducActivity">
+
+    <ImageView
+        android:id="@+id/productIv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/gray"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPhotoBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_camera_black"
+        app:backgroundTint="@color/design_default_color_primary" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/productTitleEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Title"
+        android:layout_marginTop="36dp"
+        android:inputType="text"
+        android:layout_below="@id/productIv"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/productPriceEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Price (VND)"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:layout_below="@id/productTitleEt"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/productDescriptionEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Description"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        android:layout_below="@id/productPriceEt"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/productQuantityEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Quantity"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:layout_below="@id/productDescriptionEt"/>
+
+    <Button
+        android:id="@+id/submitProductBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        app:cornerRadius="500dp"
+        android:background="@color/design_default_color_primary"
+        android:layout_below="@id/productQuantityEt"/>
+
+
+</RelativeLayout>
