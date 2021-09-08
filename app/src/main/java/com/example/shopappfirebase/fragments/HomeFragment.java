@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.example.shopappfirebase.models.ModelProduct;
 import com.example.shopappfirebase.adapters.ProductAdapter;
 import com.example.shopappfirebase.databinding.FragmentHomeBinding;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -33,12 +34,14 @@ public class HomeFragment extends Fragment {
     private ArrayList<ModelProduct> productList;
     private RecyclerView productRv;
     private ProductAdapter productAdapter;
+    private ShimmerFrameLayout shimmerView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         productRv = binding.productRv;
+        shimmerView = binding.shimmerView;
         return binding.getRoot();
     }
 
@@ -65,6 +68,8 @@ public class HomeFragment extends Fragment {
                 }
                 productAdapter = new ProductAdapter(getActivity(), productList);
                 productRv.setAdapter(productAdapter);
+                shimmerView.stopShimmer();
+                shimmerView.setVisibility(View.GONE);
             }
 
             @Override

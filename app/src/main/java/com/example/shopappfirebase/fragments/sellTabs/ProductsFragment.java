@@ -21,6 +21,7 @@ import com.example.shopappfirebase.models.ModelProduct;
 import com.example.shopappfirebase.adapters.ProductAdapter;
 import com.example.shopappfirebase.activities.AddProducActivity;
 import com.example.shopappfirebase.databinding.FragmentProductsBinding;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -39,7 +40,7 @@ public class ProductsFragment extends Fragment {
     private ArrayList<ModelProduct> productList;
     private RecyclerView productRv;
     private ProductOwnerAdapter productOwnerAdapter;
-
+    private ShimmerFrameLayout shimmerView;
 
     public ProductsFragment() {
         // Required empty public constructor
@@ -50,6 +51,7 @@ public class ProductsFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentProductsBinding.inflate(inflater, container, false);
         productRv = binding.productRv;
+        shimmerView = binding.shimmerView;
         return binding.getRoot();
     }
 
@@ -87,6 +89,8 @@ public class ProductsFragment extends Fragment {
                 }
                 productOwnerAdapter = new ProductOwnerAdapter(getActivity(), productList);
                 productRv.setAdapter(productOwnerAdapter);
+                shimmerView.stopShimmer();
+                shimmerView.setVisibility(View.GONE);
             }
 
             @Override
